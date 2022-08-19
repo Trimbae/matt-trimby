@@ -1,0 +1,53 @@
+.grid-container {
+  align-items: flex-start;
+}
+
+.title-card-container {
+  padding: 10px;
+}
+
+.title-card-prefix {
+  font-size: 5vw;
+  color: var(--orange-secondary);
+  font-weight: bold;
+}
+
+.title-card-title {
+  font-size: 15vw;
+  color: var(--orange-primary);
+  font-weight: bold;
+  margin-top: -2vw;
+}
+
+.title-card-suffix {
+  font-size: 5vw;
+  color: var(--orange-secondary);
+  font-weight: bold;
+}
+
+.title-card-footer {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .title-card-prefix {
+    font-size: 3vw;
+  }
+
+  .title-card-title {
+    font-size: 10vw;
+    margin-top: -1vw;
+  }
+
+  .title-card-suffix {
+    font-size: 4vw;
+  }
+
+  .title-card-footer {
+    margin-top: 15vh;
+    justify-content: right;
+  }
+}

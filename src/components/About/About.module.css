@@ -1,0 +1,14 @@
+.about-image {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.about-title {
+  font-size: 5vw;
+  color: var(--orange-secondary);
+}
+
+.about-text {
+  margin-top: 20px;
+  color: rgb(0, 0, 0, 0.75);
+}

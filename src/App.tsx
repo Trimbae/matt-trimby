@@ -1,18 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import NavBar from './components/NavBar/NavBar';
+import { Container } from '@mui/material';
+import { orange } from '@mui/material/colors';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: orange[500],
+      contrastText: '#fff',
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Matt Trimby</p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <NavBar />
+        <Container maxWidth="lg">
+          <Routes>
+            <Route path="/" element={<Home title="matt's title"></Home>}></Route>
+            <Route path="/about" element={<div>about</div>}></Route>
+          </Routes>
+        </Container>
+      </Router>
+    </ThemeProvider>
   );
 }
 
