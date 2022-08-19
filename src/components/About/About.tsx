@@ -10,7 +10,11 @@ export default function About() {
           <div className={styles['about-text']}>Blah blah blah</div>
         </Grid>
         <Grid item xs={4}>
-          <img className={styles['about-image']} src={require('../../assets/images/Orange.jpg')}></img>
+          <img
+            className={styles['about-image']}
+            src={require('../../assets/images/Orange.jpg')}
+            alt="matt trimby"
+          ></img>
         </Grid>
       </Grid>
     </div>

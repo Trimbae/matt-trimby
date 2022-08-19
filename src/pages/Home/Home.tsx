@@ -4,18 +4,13 @@ import { RefObject, useRef } from 'react';
 import styles from './Home.module.css';
 import { Fade } from 'react-awesome-reveal';
 
-interface HomeProps {
-  title: string;
-}
-
 const scrollToRef = (ref: RefObject<HTMLInputElement>) => {
   if (ref.current) {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   }
 };
 
-export default function Home(props: HomeProps) {
-  const { title } = props;
+export default function Home() {
   const aboutRef = useRef<HTMLInputElement>(null);
   const executeScroll = () => scrollToRef(aboutRef);
   return (
